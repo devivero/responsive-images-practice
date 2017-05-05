@@ -6,7 +6,9 @@
   <meta charset="utf-8">
   <style type="text/css">
     body {
+      background: red;
       background-image: url("gradient-background.jpg");
+      background: linear-gradient(-45deg, yellow, red);
     }
 
     img { max-width: 100%; }
@@ -24,6 +26,15 @@
       /* equivalent to 49.5% of total browser width,
       to make calculating srcset easier for us :) */
       width: 55%;
+    }
+
+    header{
+      color: white;
+      padding: 1rem;
+      background-color: orange;
+      background-image: url("space-header.jpg");
+      background-position: center;
+      background-size: cover;
     }
   </style>
 </head>
@@ -60,6 +71,26 @@
       <div class="photo-frame">
         <img src="grr.jpg" alt="a cat making a weird face">
       </div>
+
+      <!--
+        browser width 100%
+        body -
+        section -
+        .photo-container 90%
+        .photo-frame 55%
+        img  100%
+
+        -www site style -
+
+        browser 100%
+        body -
+        section 70%
+        .item-container 90%
+        div 30%
+        img 50%
+
+        image is about 10% of full browser width 
+      -->
     </div>
   </section>
 
